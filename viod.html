@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فيديوهات متعددة في بطاقات عريضة</title>
+    <style>
+        /* تنسيق البطاقة */
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 100%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            transition: height 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        /* تنسيق الحاوية الخاصة بالفيديو */
+        .video-container {
+            flex: 1;
+            max-width: 50%;
+            height: 100%;
+            padding-left: 15px;
+        }
+
+        /* تنسيق الفيديو */
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* تنسيق المحتوى النصي */
+        .content {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* تنسيق العنوان */
+        .title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+            overflow-wrap: break-word; /* لضمان عدم خروج النص الطويل عن حدود البطاقة */
+        }
+
+        /* تنسيق زر "اقرأ المزيد" */
+        .read-more-btn {
+            display: block;
+            padding: 15px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* تنسيق الوصف */
+        .description {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            text-align: center;
+        }
+        
+
+        /* تنسيق الروابط */
+        .description a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* تغيير لون الروابط عند الضغط عليها */
+        .description a:visited {
+            color: #551A8B;
+        }
+
+        /* تنسيق الشريط العلوي */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 15px; /* تقليل الحواف الداخلية للشريط */
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            height: 60px; /* تحديد ارتفاع محدد للشريط العلوي */
+            box-sizing: border-box;
+        }
+
+        .logo-container img {
+            height: 40px; /* تقليل حجم الصورة */
+        }
+
+        .home-icon {
+            height: 30px; /* تقليل حجم أيقونة المنزل */
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ar">
+<head>
+    
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="logo-container">
+            <img src="7070.png" alt="لوجو الموقع" class="small-logo">
+        </div>
+        <!-- أيقونة المنزل -->
+        <img src="https://e7.pngegg.com/pngimages/104/498/png-clipart-chimney-home-icon-icons-logos-emojis-home-icons-thumbnail.png" alt="Home" class="home-icon" onclick="navigateToPage('index.html')">
+    </header>
+
+    <!-- البطاقة الأولى -->
+    <div class="card">
+        <div class="content">
+            <div class="title">عنوان الفيديو الأول</div>
+            <button class="read-more-btn" onclick="toggleDescription('description1', this)">اقرأ المزيد</button>
+            <div class="description" id="description1">
+                <a href="https://example.com" target="_blank">رابط خارجي للفيديو الأول</a>
+                هذا هو الوصف التفصيلي للفيديو الأول. هذا النص هو مجرد مثال لإظهار كيفية توسع البطاقة تلقائيًا عندما يكون النص طويلًا بما فيه الكفاية ليتجاوز حجم البطاقة الافتراضي.
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lKMnRbpq2T4?si=atSeVXwYfkL_AASW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- البطاقة الثانية -->
+    <div class="card">
+        <div class="content">
+            <div class="title">عنوان الفيديو الثاني</div>
+            <button class="read-more-btn" onclick="toggleDescription('description2', this)">اقرأ المزيد</button>
+            <div class="description" id="description2">
+                <a href="ضع رابط لتحميل الملفات" target="_blank">رابط خارجي للفيديو الثاني</a>
+                هذا هو الوصف التفصيلي للفيديو الثاني.
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/b8W_Ws5Z9ns?si=8d6iXgI1B2QoxPoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- يمكنك إضافة المزيد من البطاقات هنا -->
+
+    <script>
+        /* وظيفة لتبديل عرض الوصف عند الضغط على زر "اقرأ المزيد" */
+        function toggleDescription(id, btn) {
+            var description = document.getElementById(id);
+            var card = btn.closest('.card');
+
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+                card.style.height = 'auto'; // السماح بتمدد البطاقة بناءً على النص
+            } else {
+                description.style.display = 'none';
+                card.style.height = '300px'; // إعادة البطاقة للحجم الأصلي
+            }
+        }
+
+        /* ترتيب البطاقات بحيث تظهر الأحدث في الأعلى */
+        document.addEventListener("DOMContentLoaded", function() {
+            var cards = document.querySelectorAll('.card');
+            var container = document.body;
+            for (var i = cards.length - 1; i >= 0; i--) {
+                container.appendChild(cards[i]);
+            }
+        });
+
+        // وظيفة التوجه إلى صفحة أخرى عند الضغط على أيقونة المنزل
+        function navigateToPage(path) {
+            window.location.href = path;
+        }
+    </script>
+
+</body>
+</html>

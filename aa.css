@@ -1,0 +1,114 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* تنسيق الشريط العلوي */
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #3f0092;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+}
+
+.navbar-left span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-right .home-button {
+    background-color: rgb(104, 0, 190);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-right .home-button:hover {
+    background-color: #ffa704;
+    color: white;
+}
+
+/* العنوان فوق البطاقات */
+.title-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.title-section h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* تنسيق البطاقات */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.card {
+    width: 350px;
+    height: 450px; /* تحديث الارتفاع ليتناسب مع إضافة الصورة والزر */
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* حجم الصورة داخل البطاقة */
+    border-radius: 10px;
+    object-fit: cover; /* لتعبئة الصورة داخل الإطار بشكل متساوٍ */
+    margin-bottom: 15px; /* مسافة بين الصورة والعنوان */
+    
+}
+    
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* تأثير عند تمرير الماوس على البطاقات */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* تنسيق الزر داخل البطاقات */
+.visit-button {
+    background-color: #750067; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 12px 25px; /* حجم الزر */
+    border: none; /* إزالة الحدود */
+    border-radius: 25px; /* جعل الزر دائريًا */
+    font-size: 16px; /* حجم النص */
+    cursor: pointer; /* إظهار المؤشر اليدوي عند التمرير */
+    transition: background-color 0.3s ease; /* تأثير الانتقال على الخلفية */
+    margin-top: 15px; /* مسافة من النص الذي يسبق الزر */
+}
+
+/* تأثير الزر عند التمرير */
+.visit-button:hover {
+    background-color: #fda500; /* تغيير لون الخلفية عند التمرير */
+    transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
+}

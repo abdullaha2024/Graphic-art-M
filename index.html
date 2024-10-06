@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع Graphic art
+للتصميم والإعلان    </title>
+<link rel="icon" href="https://i.pinimg.com/736x/e3/d5/fb/e3d5fb16c9389885c06e125daf8e56dd.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Graphic art</div>
+        <nav>
+            <ul>
+                <li><a href="photo.html">الاعمال</a></li>
+                <li><a href="viod.html">الفديو</a></li>
+                <li><a href="https://api.whatsapp.com/send/?phone=201147259681&text&type=phone_number&app_absent=0">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Slideshow Section -->
+    <section class="slideshow">
+        <img src="040.png" class="slide" alt="Slide 1">
+        <img src="abdo 3.png" class="slide" alt="Slide 2">
+        <img src="010.png" class="slide" alt="Slide 3">
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>من نحن</h2>
+        <div class="social-icons">
+            <a href="https://wa.me/+02‎01147259681" target="_blank"><img src="https://cdn-icons-png.freepik.com/256/15707/15707917.png?semt=ais_hybrid" alt="واتساب"></a>
+            <a href="https://www.facebook.com/profile.php?id=61565837631508" target="_blank"><img src="https://e7.pngegg.com/pngimages/175/452/png-clipart-facebook-logo-facebook-icon-logo-facebook-icon-blue-text-thumbnail.png" alt="فيسبوك"></a>
+            <a href="https://www.youtube.com/@GraphicArt-t8y" target="_blank"><img src="https://e7.pngegg.com/pngimages/258/779/png-clipart-youtube-logo-application-illustration-youtube-play-button-computer-icons-blog-angle-logo-thumbnail.png" alt="يوتيوب"></a>
+        </div>
+       
+        <p class="custom-text">
+           
+            <br> مرحبًا بكم في منصة فن الجرافيك حيث يلتقي الإبداع بالابتكار
+            <br>أنا مصمم جرافيك شغوف من مصر، أختص في تصميمات بصرية مميزة تروي قصتك
+            <br> وترفع من قيمة علامتك التجارية. بدقة متناهية وفهم عميق لمبادئ التصميم 
+            <br> ألتزم بتحويل أفكارك إلى تصميم جذابة تلامس جمهورك. سواء كنت تبحث عن هوية بصرية
+            <br>أو تصميمات رقمية، أوأي حل إبداعي آخر، أنا هنا لأجعل رؤيتك واقعًا.
+        </p>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+ 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بطاقات متجاوبة</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Container for the cards */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Makes sure cards are spread evenly */
+            margin: 20px 0;
+        }
+
+        /* Card style */
+        .card {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: calc(33.333% - 30px); /* Adjusts the width dynamically */
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            padding: 0 15px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Adds a hover effect */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 900px) {
+            .card {
+                width: calc(50% - 30px); /* 2 cards per row on medium screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: calc(100% - 30px); /* 1 card per row on small screens */
+            }
+        }
+    </style>
+</head>
+<body><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button with Rounded Corners</title>
+        <style>
+            /* تنسيقات الزر */
+            .rounded-button {
+                background-color: #a00063; /* لون خلفية الزر */
+                color: rgb(0, 0, 0); /* لون النص داخل الزر */
+                padding: 15px 30px; /* المسافات الداخلية للزر */
+                font-size: 18px; /* حجم النص */
+                border: none; /* إزالة الحدود */
+                border-radius: 20px; /* جعل الحواف منحنية */
+                cursor: pointer; /* شكل المؤشر عند التمرير فوق الزر */
+                transition: background-color 0.3s ease; /* تأثير الانتقال عند التمرير */
+            }
+    
+            /* تغيير لون الزر عند التمرير فوقه */
+            .rounded-button:hover {
+                background-color: #6f006f; /* لون جديد عند التمرير */
+            }
+        </style>
+    </head>
+    <body>
+    
+        <!-- الزر الذي يفتح صفحة .html عند الضغط عليه -->
+        <button class="rounded-button" onclick="window.location.href='home.html';">لنبدأ</button>
+    
+    </body>
+    </html>
+    <section class="offer-section">
+       
+        <h2> بعض من اعمالنا</h2>
+
+   <!-- Container for the 3 cards -->
+<div class="cards-container">
+    <!-- First row of cards -->
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/cb/a4/76/cba4768e404e460a1599af8678b5be21.jpg" alt="Image 1">
+        <h3>تصميم غلاف كتاب فلسفة </h3>
+        <p>تصميم غلاف كتاب فلسفة بستخدام برنامج الفوتوشوب</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/cb/a4/76/cba4768e404e460a1599af8678b5be21.jpg" alt="Image 2">
+        <h3>تصميم غلاف كتاب فلسفة </h3>
+        <p>تصميم غلاف كتاب فلسفة بستخدام برنامج الفوتوشوب</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/cb/a4/76/cba4768e404e460a1599af8678b5be21.jpg" alt="Image 3">
+        <h3>تصميم غلاف كتاب فلسفة </h3>
+        <p>تصميم غلاف كتاب فلسفة بستخدام برنامج الفوتوشوب</p>
+    </div>
+</div>
+
+<!-- Container for the next 3 cards -->
+<div class="cards-container">
+    <!-- Second row of cards -->
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/cd/5a/c0/cd5ac0e4c2bd9e4dc775584fc93f8a01.jpg" alt="Image 4">
+        <h3>تصميم غلاف كتاب فلسفة </h3>
+        <p>تصميم غلاف كتاب علوم بستخدام برنامج الفوتوشوب</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/cd/5a/c0/cd5ac0e4c2bd9e4dc775584fc93f8a01.jpg" alt="Image 5">
+        <h3>تصميم غلاف كتاب علوم</h3>
+        <p>تصميم غلاف كتاب علوم بستخدام برنامج الفوتوشوب</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/cd/5a/c0/cd5ac0e4c2bd9e4dc775584fc93f8a01.jpg" alt="Image 6">
+        <h3>بطاقة 6</h3>
+        <p>تصميم غلاف كتاب علوم بستخدام برنامج الفوتوشوب</p>
+    </div>
+</div>
+<style>
+    .offer-section {
+        text-align: center; /* جعل النص في المنتصف */
+        margin-top: 50px;
+    }
+    
+    .offer-section h2 {
+        font-size: 25px; /* حجم خط عنوان ماذا نقدم */
+        margin-bottom: 20px; /* مسافة بين العنوان والنص */
+    }
+    
+    .offer-section p {
+        font-size: 18px; /* حجم خط النص تحت العنوان */
+        max-width: 600px; /* أقصى عرض للنص */
+        margin: 0 auto; /* لجعل النص في المنتصف */
+        line-height: 1.6; /* لضبط تباعد الأسطر */
+    }
+    </style>
+    
+    <section class="offer-section">
+       
+        <h2>ماذا نقدم</h2>
+        <p>
+            نحن نقدم حلولًا إبداعية تشمل تصميم الشعارات، الهويات البصرية، تصميم المواقع، والمزيد.
+            هدفنا هو تقديم خدمات مميزة تلبي احتياجاتك وتساعدك على الوصول لجمهورك المستهدف بأسلوب
+            فريد وفعال. نسعى جاهدين لتقديم نتائج تفوق التوقعات مع مراعاة أدق التفاصيل.
+        </p>
+        
+    </section>
+    
+    
+    <footer>
+       
+      </footer>
+      </body>
+    </html>

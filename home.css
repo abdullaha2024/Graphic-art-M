@@ -1,0 +1,258 @@
+/* إعادة تعيين الهوامش والحشوات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تنسيق عام للجسم */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* تنسيق رأس الصفحة */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(86, 74, 247);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+/* تنسيق الشعار */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* تنسيق صورة الشعار الصغيرة */
+.logo-container img.small-logo {
+    height: 100px;
+    width: 120px;
+}
+
+/* تنسيق زر القائمة الجانبية */
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001; /* التأكد من أن الزر يظهر فوق العناصر الأخرى */
+}
+
+/* تنسيق القائمة الجانبية */
+.sidebar {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: rgb(86, 74, 247);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* إظهار القائمة الجانبية عند الضغط على زر القائمة */
+.sidebar.active {
+    right: 0;
+}
+
+/* تنسيق زر الإغلاق في القائمة الجانبية */
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* تنسيق الأزرار في القائمة الجانبية */
+.button {
+    background-color: #01ddad;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: block; /* تحويل الزر ليصبح block ليمتد على العرض الكامل */
+    width: 100%; /* عرض الزر بالكامل */
+    text-align: center; /* محاذاة النص في الوسط */
+    margin: 30px 0; /* مسافة عمودية بين الأزرار */
+}
+
+/* تأثير عند تمرير الفأرة فوق الأزرار */
+.button:hover {
+    background-color: rgb(63, 8, 216);
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* زر صغير خاص */
+.small-button {
+    width: auto; /* يمكن تخصيص العرض للزر الصغير */
+}
+
+/* تنسيق قسم الصورة والنص المتحرك */
+.main-content {
+    position: relative;
+    text-align: center;
+}
+
+.main-content img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/* رفع النص المتحرك بنسبة 20px */
+.moving-text {
+    font-size: 40px;
+    color: #fff;
+    animation: moveUp 5s infinite;
+    text-align: center;
+    margin-top: -9%;
+}
+
+/* الحركة من أسفل لأعلى */
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* تنسيق النصوص أسفل الصورة */
+.text-below h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #70003e;
+}
+
+.text-below p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #74006e;
+}
+
+/* تنسيق النصوص داخل العنصر .custom-text */
+.custom-text {
+    font-size: 40px;
+    color: #000000;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* تخصيص الأسطر الفردية */
+.custom-text br + br {
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* تخصيص لون الروابط إذا كانت موجودة داخل النص */
+.custom-text a {
+    color: #29e4e4;
+    text-decoration: underline;
+}
+
+/* تنسيق زر تسجيل الدخول بحساب جوجل */
+#google-signin-button {
+    background-color: #ffffff00;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    font-size: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* تأثير عند تمرير الفأرة فوق زر تسجيل الدخول */
+#google-signin-button:hover {
+    background-color: #01ddad;
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
+
+/* تنسيق الصور بجانب بعضها */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+
+    
+}
+
+/* تنسيق الصور بجانب بعضها */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap; /* السماح بلف العناصر */
+}
+
+/* تخصيص عرض البطاقة عند حجم الشاشة الصغير */
+@media (max-width: 768px) {
+    .image-card {
+        width: 100%; /* تجعل العرض 100% عند عرض الشاشة الصغير */
+        margin-bottom: 20px; /* إضافة مسافة بين الصور */
+    }
+}
+
+/* تنسيق البطاقات */
+.image-card {
+    width: 370px; /* حجم البطاقة */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* تأثير التكبير عند تمرير الماوس */
+.image-card img {
+    width: 100%;
+    border-radius: 15px; /* حواف دائرية للصورة */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-card img:hover {
+    transform: scale(1.1); /* تكبير الصورة عند تمرير الماوس */
+}
+
+/* تخصيص تأثير النقر */
+.image-card:active img {
+    transform: scale(1.2); /* تكبير إضافي عند النقر */
+    transition: transform 0.1s ease-in-out;
+}

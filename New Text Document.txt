@@ -1,0 +1,110 @@
+    <header>
+        <div class="logo-container">
+            <img src="7070.png" alt="لوجو الموقع" class="small-logo">
+        </div>
+        <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            &#9776;
+        </div>
+    </header>
+
+    <nav id="sidebar" class="sidebar">
+        <div class="close-btn" id="close-btn" aria-label="Close menu">
+            &times;
+        </div>
+        <div>
+            <button class="button" onclick="navigateToPage('index.html')">الرئيسية</button>
+            <button class="button" onclick="navigateToPage('https://www.youtube.com/@GraphicArt-t8y')">قناتنا على يوتيوب</button>
+            <button class="button" onclick="navigateToPage('https://drive.google.com/file/d/13ce3-A_tI6_k-TvzXOtyAHrvRc_BqFiT/view?usp=sharing')">خطوط</button>
+            <button class="button" onclick="navigateToPage('photo.html')">معرض الاعمال</button>
+            <button class="button" onclick="navigateToPage('viod.html')">شروحات الدروس على يوتيوب</button>
+            <button class="button" onclick="navigateToPage('https://wa.me/+02‎01147259681')">تواصل معنا</button>
+        </div>
+        <div id="google-signin-button"></div>
+    </nav>
+
+    <main class="main-content">
+        <img src="pin.png" alt="صورة لاب توب" aria-hidden="true">
+        <div class="overlay">
+            <div class="moving-text">
+                <span>مرحبا بكم</span><br>
+                <span>في موقع فن الجرافيك للتصميم والإعلان</span>
+            </div>
+        </div>
+        <div class="text-below">
+            <h1>مرحبا بكم في موقعنا للتصميم والإعلان</h1>
+            <div class="text-below">
+                <center>
+                    <h2>فن الجرافيك</h2>
+                    <p class="custom-text">
+                        <br> من نحن 
+                        <br>نحن فريق نقوم بعمل تصميمات سوشيال ميديا ونقوم بعمل تصميمات المدرسين تصميم اغلفة ملازم
+                        <br>ونقوم بعمل تصميمات بوستر دعائي وتصميم منيو وتصميمات يفط الشوارع
+                        <br>نحن نقدم شرح للمصممين المبتدئين كيف عمل تصميمات على قناتنا على يوتيوب Graphic art
+                        <br>للتواصل معنا على واتساب الاتصال على : 01147259681
+                    </p>
+                </center>
+            </div>
+        </div>
+    </main>
+
+    <!-- إضافة الصور الجديدة -->
+    <main class="main-content">
+        <!-- صور بجانب بعضها -->
+        <div class="image-gallery">
+            <div class="image-card">
+                <img src="imeg copy.png" alt="تصميم 1" onclick="navigateToPage('https://wa.me/+02‎01147259681')">
+            </div>
+            <div class="image-card">
+                <img src="446.png" alt="تصميم 2" onclick="navigateToPage('viod.html')">
+            </div>
+            <div class="image-card">
+                <img src="imeg2.png" alt="تصميم 3" onclick="navigateToPage('photo.html')">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2024 جميع الحقوق محفوظة
+    </footer>
+
+    <script>
+        // دالة التنقل بين الصفحات
+        function navigateToPage(pageUrl) {
+            window.location.href = pageUrl;
+        }
+
+        // تهيئة تسجيل الدخول باستخدام حساب جوجل
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: 'YOUR_GOOGLE_CLIENT_ID',
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("google-signin-button"),
+                { theme: "outline", size: "large" }
+            );
+            google.accounts.id.prompt();
+
+            // إضافة الحدث لفتح القائمة الجانبية
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.toggle('active');
+            });
+
+            // إضافة الحدث لإغلاق القائمة الجانبية
+            document.getElementById('close-btn').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.remove('active');
+            });
+        }
+    </script>
+
+
+
+الكود الاول       firebase serve
+  
+
+
+الكود الثاني        firebase deploy

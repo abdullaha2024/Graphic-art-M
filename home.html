@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>موقع فن الجرافيك للتصميم والإعلان</title>
+    <link rel="icon" href="https://i.pinimg.com/736x/e3/d5/fb/e3d5fb16c9389885c06e125daf8e56dd.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="main.js" defer></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1012729563159315"
+     crossorigin="anonymous"></script>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="7070.png" alt="لوجو الموقع" class="small-logo">
+        </div>
+        <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            &#9776;
+        </div>
+    </header>
+    <nav id="sidebar" class="sidebar">
+        <div class="close-btn" id="close-btn" aria-label="Close menu">
+            &times;
+        </div>
+        <div>
+            <button class="button" onclick="navigateToPage('index.html')">الرئيسية</button>
+            <button class="button" onclick="navigateToPage('https://www.youtube.com/@GraphicArt-t8y')">قناتنا على يوتيوب</button>
+            <button class="button" onclick="navigateToPage('photo.html')">تصميمات</button>
+            <button class="button" onclick="navigateToPage('https://alfont.com/')">خطوط</button>
+            <button class="button" onclick="navigateToPage('photo.html')">معرض الاعمال </button>
+            <button class="button" onclick="navigateToPage('d.html')">اهم المواقع للمصممين</button>
+            <button class="button" onclick="navigateToPage('https://api.whatsapp.com/send/?phone=201147259681&text&type=phone_number&app_absent=0')">تواصل معنا</button>
+        </div>
+        <div id="google-signin-button"></div>
+    </nav>
+    <main class="main-content">
+        <img src="pin.png" alt="صورة لاب توب" aria-hidden="true">
+        <div class="overlay">
+            <div class="moving-text">
+                <span>مرحبا بكم</span><br>
+                <span>في موقع فن الجرافيك للتصميم والإعلان</span>
+            </div>
+        </div>
+        <div class="text-below">
+            <h1>مرحبا بكم في موقعنا للتصميم والإعلان</h1>
+            <div class="text-below">
+                <center>
+                    <h2>فن الجرافيك</h2>
+                    <p class="custom-text">
+                        <br> من نحن 
+                        <br>نحن فريق نقوم بعمل تصميمات سوشيال ميديا ونقوم بعمل تصميمات المدرسين تصميم اغلفة ملازم
+                        <br>ونقوم بعمل تصميمات بوستر دعائي وتصميم منيو وتصميمات يفط الشوارع
+                        <br>نحن نقدم شرح للمصممين المبتدئين كيف عمل تصميمات على قناتنا على يوتيوب Graphic art
+                        <br>للتواصل معنا على واتساب الاتصال على : 0114259681
+                    </p>
+                </center>
+            </div>
+        </div>
+    </main>
+    
+    <!-- إضافة الصور الجديدة -->
+    <main class="main-content">
+        <!-- صور بجانب بعضها -->
+        <div class="image-gallery">
+            <div class="image-card">
+                <img src="imeg copy.png" alt="تصميم 1" onclick="navigateToPage('https://api.whatsapp.com/send/?phone=201063923704&text&type=phone_number&app_absent=0')">
+            </div>
+            <div class="image-card">
+                <img src="446.png" alt="تصميم 2" onclick="navigateToPage('viod.html')">
+            </div>
+            <div class="image-card">
+                <img src="imeg2.png" alt="تصميم 3" onclick="navigateToPage('photo.html')">
+            </div>
+        </div>
+    </main>
+
+    
+    <script>
+        // دالة التنقل بين الصفحات
+        function navigateToPage(pageUrl) {
+            window.location.href = pageUrl;
+        }
+
+        // تهيئة تسجيل الدخول باستخدام حساب جوجل
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: 'YOUR_GOOGLE_CLIENT_ID',
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("google-signin-button"),
+                { theme: "outline", size: "large" }
+            );
+            google.accounts.id.prompt();
+
+            // إضافة الحدث لفتح القائمة الجانبية
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.toggle('active');
+            });
+
+            // إضافة الحدث لإغلاق القائمة الجانبية
+            document.getElementById('close-btn').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</head>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .content {
+      padding-bottom: 40px; /* إضافة مساحة للتذييل */
+      order: 1;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      line-height: 30px;
+      order: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- محتوى الموقع هنا -->
+  </div>
+
+  <footer>
+    © 2024 GraphicArt جميع الحقوق 
+  </footer>
+  </body>
+</html>

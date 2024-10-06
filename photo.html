@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://i.pinimg.com/originals/e3/d5/fb/e3d5fb16c9389885c06e125daf8e56dd.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع فن الجرافيك للتصميم والإعلان</title>
+    <link rel="stylesheet" href="acer.css"> <!-- ربط ملف الـCSS -->
+
+   </head>
+
+<body>
+    <!-- الشريط العلوي -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <span>Graphic art</span>
+        </div>
+        <div class="navbar-right">
+            <button class="home-button" onclick="navigateToPage('home.html')">منزل</button>
+        </div>
+    </header>
+
+    <!-- معرض الصور -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/49/c9/62/49c962868be335049df755e1112d6f05.jpg" alt="صورة 1" onclick="openModal(this.src, 'مرحبا بكم في موقعنا فن اجرافيك')">
+                <p>وصف الصورة 1</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/fd/2b/8f/fd2b8fdbfc84d621d2652fde164c0295.jpg" alt="صورة 2" onclick="openModal(this.src, 'مرحبا بكم في موقعنا فن اجرافيك')">
+                <p>وصف الصورة 2</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/b4/de/ae/b4deae40592bb4d541d6ec773f384aa1.jpg" alt="صورة 3" onclick="openModal(this.src, 'مرحبا بكم في موقعنا فن اجرافيك')">
+                <p>وصف الصورة 3</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://i.pinimg.com/474x/81/24/c1/8124c12741cd91f3b728efe2f3aa7a6f.jpg" alt="صورة 4" onclick="openModal(this.src, 'مرحبا بكم في موقعنا فن اجرافيك')">
+                <p>وصف الصورة 4</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة الصورة الكبيرة (مودال) -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="modalDescription" class="modal-description"></div>
+    </div>
+
+    <!-- الشريط السفلي -->
+    <footer>
+        <p>© 2024 جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        // وظيفة التوجه إلى صفحة أخرى عند الضغط على أيقونة المنزل
+        function navigateToPage(path) {
+            window.location.href = path;
+        }
+
+        // فتح المودال عند الضغط على الصورة
+        function openModal(src, description) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var modalDesc = document.getElementById("modalDescription");
+            modal.style.display = "flex";
+            modalImg.src = src;
+            modalDesc.textContent = description;
+        }
+
+        // إغلاق المودال عند الضغط على زر الإغلاق
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

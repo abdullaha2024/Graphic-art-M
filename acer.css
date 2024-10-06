@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* تنسيق الشريط العلوي */
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #3f0092;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+}
+
+.navbar-left span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-right .home-button {
+    background-color: rgb(104, 0, 190);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-right .home-button:hover {
+    background-color: #ffa704;
+    color: white;
+}
+
+/* معرض الصور */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* ترك مسافة بين الصور */
+    margin-top: 80px; /* ترك مسافة من الشريط العلوي */
+    justify-content: flex-start; /* بدء توزيع الصور من اليسار */
+}
+
+.gallery-item {
+    flex: 0 0 calc(25% - 15px); /* تعديل حجم الصور ليكون بجانب بعضهها */
+    box-sizing: border-box; /* لضمان أن البعد يشمل الحواف */
+}
+
+/* لجعل الصور تظهر واحدة تحت الأخرى عند صغر الشاشة */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 100%; /* كل صورة تأخذ 100% من عرض الشاشة */
+    }
+}
+
+/* تنسيق البطاقة */
+.card {
+    border-radius: 20px; /* جعل زوايا البطاقة دائرية */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 350px; /* عرض البطاقة ثابت */
+    height: 300px; /* ارتفاع البطاقة ثابت */
+    display: flex;
+    flex-direction: column; /* لضمان وجود النص تحت الصورة */
+    justify-content: space-between; /* توزيع المسافات بشكل مناسب */
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: auto; /* تحكم في ارتفاع الصورة بشكل تلقائي */
+    display: block;
+    max-height: 90%; /* نحدد الحد الأقصى لارتفاع الصورة داخل البطاقة */
+    object-fit: cover; /* تأكد من أن الصورة تغطي المساحة بدون تشويه */
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.05); /* تكبير الصورة عند التمرير فوقها */
+}
+
+/* نص الوصف */
+.card p {
+    text-align: center;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* النافذة المنبثقة (المودال) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* الشريط السفلي */
+footer {
+    width: 100%;
+    height: 30px; /* جعل ارتفاع الشريط السفلي 30px */
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* تنسيق النص في الشريط السفلي */
+footer p {
+    margin: 0;
+}

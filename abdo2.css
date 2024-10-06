@@ -1,0 +1,198 @@
+/* إعادة تعيين الهوامش والحشوات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تنسيق رأس الصفحة */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(86, 74, 247);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+/* تنسيق الشعار */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* تنسيق صورة الشعار الصغيرة */
+.logo-container img.small-logo {
+    height: 100px;
+    width: 120px;
+}
+
+/* تنسيق زر القائمة الجانبية */
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001; /* التأكد من أن الزر يظهر فوق العناصر الأخرى */
+}
+
+/* تنسيق القائمة الجانبية */
+.sidebar {
+    height: 100%;
+    width: 100vw; /* جعل العرض ملء الشاشة */
+    position: fixed;
+    top: 0;
+    left: -100vw; /* يبدأ من خارج الشاشة إلى اليسار */
+    background-color: rgb(86, 74, 247);
+    overflow-x: hidden;
+    transition: 0.5s ease; /* تأثير الانتقال */
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* إظهار القائمة الجانبية عند الضغط على زر القائمة */
+.sidebar.active {
+    left: 0; /* تظهر القائمة على الشاشة */
+}
+
+/* تنسيق زر الإغلاق في القائمة الجانبية */
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px; /* تغيير إلى اليمين */
+}
+
+/* تنسيق الأزرار في القائمة الجانبية */
+.button {
+    background-color: #01ddad;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: block; /* تحويل الزر ليصبح block ليمتد على العرض الكامل */
+    width: 80%; /* تقليل العرض قليلاً مع ترك مساحة للهوامش */
+    margin: 15px auto; /* توسيط الأزرار أفقياً */
+    text-align: center; /* محاذاة النص في الوسط */
+}
+
+/* تأثير عند تمرير الفأرة فوق الأزرار */
+.button:hover {
+    background-color: rgb(63, 8, 216);
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* تنسيق زر تسجيل الدخول بحساب جوجل */
+#google-signin-button {
+    background-color: #ffffff00;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    font-size: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* تأثير عند تمرير الفأرة فوق زر تسجيل الدخول */
+#google-signin-button:hover {
+    background-color: #01ddad;
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
+
+/* تنسيق معرض الصور */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    flex-basis: calc(33.333% - 20px);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* تنسيق المودال */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* محتوى المودال */
+.modal-content {
+    max-width: 90%; /* تجعل الصورة أقل قليلاً من ملء الشاشة */
+    max-height: 90%; /* تجعل الصورة أقل قليلاً من ملء الشاشة */
+    animation: zoomIn 0.5s;
+}
+
+/* وصف المودال */
+.modal-description {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* تأثير التكبير */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* زر إغلاق المودال */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
